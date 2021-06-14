@@ -30,14 +30,16 @@ $users = json_decode($data);
     <form action="insert.php" method="post">
         <p>Create<p>
         Código: <input type="text" name="codigo"><br>
-        Name: <input type="text" name="name"><br>
+        Nome: <input type="text" name="nome"><br>
+        Sobrenome: <input type="text" name="sobrenome"><br>
         E-mail: <input type="text" name="email"><br>
         <input type="submit">
     </form>
     <form action="update.php" method="post">
         <p>Update<p>
         Código: <input type="text" name="codigo"><br>
-        Name: <input type="text" name="name"><br>
+        Nome: <input type="text" name="nome"><br>
+        Sobrenome: <input type="text" name="sobrenome"><br>
         E-mail: <input type="text" name="email"><br>
         <input type="submit">
     </form>
