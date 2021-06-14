@@ -6,11 +6,14 @@ $data = file_get_contents('data.json');
 // decode json to associative array
 $json_arr = json_decode($data, true);
 
+
+//collect data from form
+$codigo = $_POST['codigo'];
 // get array index to delete
 $arr_index = array();
 foreach ($json_arr as $key => $value)
 {
-    if ($value['codigo'] == '4')
+    if ($value['codigo'] == $codigo)
     {
         $arr_index[] = $key;
     }

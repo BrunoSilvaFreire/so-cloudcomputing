@@ -5,12 +5,18 @@ $data = file_get_contents('data.json');
 
 // decode json to array
 $json_arr = json_decode($data, true);
+//collect data from form
+$codigo = $_POST['codigo'];
+$nome = $_POST['nome'];
+$sobrenome = $_POST['sobrenome'];
+$email = $_POST['email'];
 
+// decode json to array
 foreach ($json_arr as $key => $value) {
-    if ($value['codigo'] == '4') {
-		$json_arr[$key]['nome'] = 'Vilmar';
-        $json_arr[$key]['sobrenome'] = 'Abreu';
-		$json_arr[$key]['email'] = 'vilmar.abreu@pucpr.br';
+    if ($value['codigo'] == $codigo) {
+  		$json_arr[$key]['nome'] = $nome;
+      $json_arr[$key]['sobrenome'] = $sobrenome;
+	  	$json_arr[$key]['email'] = $email;
     }
 }
 

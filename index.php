@@ -25,4 +25,31 @@ $users = json_decode($data);
         <?php } ?>
     </tbody>
 </table>
+<body>
+<br>
+    <form action="create.php" method="post">
+        <p>Create<p>
+        Código: <input type="text" name="codigo"><br>
+        Name: <input type="text" name="name"><br>
+        E-mail: <input type="text" name="email"><br>
+        <input type="submit">
+    </form>
+    <form action="read.php" method="post">
+        <p>Read<p>
+        Código: <input type="text" name="codigo"><br>
+        <input type="submit">
+    </form>
+    <form action="update.php" method="post">
+        <p>Update<p>
+        Código: <input type="text" name="codigo"><br>
+        Name: <input type="text" name="name"><br>
+        E-mail: <input type="text" name="email"><br>
+        <input type="submit">
+    </form>
+    <form action="delete.php" method="post">
+        <p>Delete<p>
+        Código: <input type="text" name="codigo"><br>
+        <input type="submit">
+    </form>
+</body>
 </html>
